@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Member Login — DIU CPC 99 Days</title>
+  <meta name="description" content="Login to the DIU CPC 99 Days of Coding program using your Membership ID and registered email." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="https://diucpc.club" class="brand">
+        <div class="brand-logo">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">DIU CPC</span>
+          <span class="brand-tagline">Let Infinity Be Your Limit</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <a href="https://diucpc.club" class="nav-link">← Back to Site</a>
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light mode">
+          <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── MAIN ── -->
+  <main class="page-main">
+    <!-- BG decorations -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="blob blob-1" aria-hidden="true"></div>
+    <div class="blob blob-2" aria-hidden="true"></div>
+
+    <div class="page-content">
+
+      <!-- LEFT: Branding Column -->
+      <div class="branding-col">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span>
+          <span class="mono">DIU CPC</span>
+          <span class="divider">|</span>
+          <span>99 Days of Coding</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="line-normal">Code.</span>
+          <span class="line-gradient">Build.</span>
+          <span class="line-amp"><span class="amp-symbol mono">&amp;</span> Innovate.</span>
+        </h1>
+
+        <p class="hero-desc">
+          <strong>DIU's ultimate tech hub.</strong> Sign in to access your 99-day learning journey, track progress, and unlock your potential.
+        </p>
+
+        <!-- Track Pills -->
+        <div class="track-cards">
+          <div class="track-card">
+            <span class="track-bar bar-blue"></span>
+            <span class="track-num mono">01</span>
+            <div class="track-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6 9H4.5a1 1 0 0 1 0-5H6"/><path d="M18 9h1.5a1 1 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 22"/><path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 22"/></svg>
+              Competitive Prog.
+            </div>
+            <p class="track-sub">ICPC, NCPC &amp; National Prep</p>
+          </div>
+          <div class="track-card">
+            <span class="track-bar bar-cyan"></span>
+            <span class="track-num mono">02</span>
+            <div class="track-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+              Modern Dev &amp; AI
+            </div>
+            <p class="track-sub">Web, App, AI &amp; Research</p>
+          </div>
+          <div class="track-card">
+            <span class="track-bar bar-emerald"></span>
+            <span class="track-num mono">03</span>
+            <div class="track-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/></svg>
+              Mentorship
+            </div>
+            <p class="track-sub">Mentoring the next generation</p>
+          </div>
+        </div>
+
+        <!-- Stats row -->
+        <div class="stats-row">
+          <div class="stat">
+            <span class="stat-num">760+</span>
+            <span class="stat-label">Members</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">99</span>
+            <span class="stat-label">Day Journey</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">5</span>
+            <span class="stat-label">Tracks</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Login Card -->
+      <div class="login-col">
+        <div class="login-card" id="loginCard">
+          <!-- Card header bar -->
+          <div class="card-topbar">
+            <div class="traffic-lights">
+              <span class="tl red"></span>
+              <span class="tl yellow"></span>
+              <span class="tl green"></span>
+            </div>
+            <span class="mono card-filename">member_auth.v1</span>
+          </div>
+
+          <!-- Card body -->
+          <div class="card-body">
+            <div class="card-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+              Secure Member Portal
+            </div>
+
+            <h2 class="card-title">Welcome Back 👋</h2>
+            <p class="card-sub">Sign in with your <strong>Membership ID</strong> and <strong>registered email</strong> to continue your 99-day journey.</p>
+
+            <!-- LOGIN FORM -->
+            <form class="login-form" id="loginForm" novalidate>
+
+              <!-- Membership ID -->
+              <div class="form-group" id="grp-memberid">
+                <label class="form-label" for="memberId">
+                  <span class="label-upper mono">Membership ID</span>
+                </label>
+                <div class="input-wrapper">
+                  <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+                  <input
+                    type="text"
+                    id="memberId"
+                    name="memberId"
+                    class="form-input"
+                    placeholder="e.g. 2007  or  DIU-CPC-2024-001"
+                    autocomplete="username"
+                    required
+                    spellcheck="false"
+                  />
+                </div>
+                <span class="form-error" id="err-memberid" role="alert"></span>
+                <span class="form-hint">Accepted: <span class="mono">2007</span> &nbsp;or&nbsp; <span class="mono">DIU-CPC-2024-001</span></span>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group" id="grp-email">
+                <label class="form-label" for="email">
+                  <span class="label-upper mono">Registered Email</span>
+                </label>
+                <div class="input-wrapper">
+                  <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/></svg>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="e.g. name@diu.edu.bd"
+                    autocomplete="email"
+                    required
+                    spellcheck="false"
+                  />
+                </div>
+                <span class="form-error" id="err-email" role="alert"></span>
+              </div>
+
+              <!-- Remember + Forgot row -->
+              <div class="form-row-inline">
+                <label class="checkbox-label" for="remember">
+                  <input type="checkbox" id="remember" class="checkbox-input" />
+                  <span class="checkbox-custom"></span>
+                  <span class="checkbox-text">Remember me</span>
+                </label>
+                <button type="button" class="forgot-btn" id="forgotBtn">Forgot ID?</button>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="submit-btn" id="submitBtn">
+                <span class="btn-label" id="btnLabel">
+                  <span class="btn-run mono">Run</span>
+                  Sign In
+                  <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </span>
+                <span class="btn-spinner" id="btnSpinner" hidden>
+                  <svg class="spinner-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
+                  Verifying...
+                </span>
+                <span class="btn-shine" aria-hidden="true"></span>
+              </button>
+
+              <!-- Alert area -->
+              <div class="form-alert" id="formAlert" role="alert" hidden></div>
+
+            </form>
+
+            <!-- Divider -->
+            <div class="card-divider">
+              <span class="divider-line"></span>
+              <span class="divider-text mono">OR</span>
+              <span class="divider-line"></span>
+            </div>
+
+            <!-- Footer links -->
+            <div class="card-footer-links">
+              <p class="footer-note">Don't have an account?
+                <a href="https://diucpc.club" class="footer-link" target="_blank">Join CPC
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </p>
+              <p class="footer-note">Need help?
+                <a href="mailto:diucsecpc.official@gmail.com" class="footer-link">Contact us</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Floating badges -->
+          <div class="float-badge badge-top-right" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6 9H4.5a1 1 0 0 1 0-5H6"/><path d="M18 9h1.5a1 1 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66v1.626a2 2 0 0 1-.976 1.696A5 5 0 0 0 7 22"/><path d="M14 14.66v1.626a2 2 0 0 0 .976 1.696A5 5 0 0 1 17 22"/></svg>
+          </div>
+          <div class="float-badge badge-bottom-left" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+          </div>
+        </div>
+
+        <!-- Trust row -->
+        <div class="trust-row">
+          <div class="trust-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+            Secure Login
+          </div>
+          <div class="trust-dot"></div>
+          <div class="trust-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Real-time Verification
+          </div>
+          <div class="trust-dot"></div>
+          <div class="trust-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg>
+            760+ Verified Members
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ── SUCCESS OVERLAY ── -->
+  <div class="success-overlay" id="successOverlay" hidden>
+    <div class="success-card">
+      <div class="success-icon">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+          <path d="m9 12 2 2 4-4"/>
+        </svg>
+      </div>
+      <h3 class="success-title">Verified! 🚀</h3>
+      <p class="success-msg" id="successMsg">Welcome back, member!</p>
+      <div class="success-info" id="successInfo"></div>
+      <button class="success-btn" id="successClose">Continue to Dashboard →</button>
+    </div>
+  </div>
+
+  <!-- ── FORGOT MODAL ── -->
+  <div class="modal-overlay" id="forgotModal" hidden role="dialog" aria-modal="true" aria-label="Forgot Membership ID">
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      </div>
+      <h3 class="modal-title">Forgot your Membership ID?</h3>
+      <p class="modal-desc">Your Membership ID was sent to your registered email when you joined DIU CPC. You can also find it in your membership certificate or by contacting us.</p>
+      <div class="modal-actions">
+        <a href="mailto:diucsecpc.official@gmail.com?subject=Membership ID Recovery" class="modal-btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/></svg>
+          Email Us for Recovery
+        </a>
+        <button class="modal-btn-secondary" id="modalCancel">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="mono footer-logo">DIU CPC</span>
+        <span class="footer-sep">·</span>
+        <span>Dhaka International University</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://diucpc.club" target="_blank">Website</a>
+        <a href="mailto:diucsecpc.official@gmail.com">Email</a>
+        <a href="https://facebook.com/diucsecpc" target="_blank">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

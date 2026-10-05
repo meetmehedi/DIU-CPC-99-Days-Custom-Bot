@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+chroma_db/
+*.sqlite3
+*.log
+.DS_Store
+login-portal/memebers.csv

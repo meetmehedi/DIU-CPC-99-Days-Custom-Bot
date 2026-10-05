@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>99 Days Mentor — DIU CPC</title>
+  <meta name="description" content="DIU CPC 99 Days of Coding — Your AI Coding Mentor"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+
+<!-- ── TOP NAVBAR ── -->
+<header class="dash-navbar">
+  <div class="dash-navbar-inner">
+    <a href="https://diucpc.club" class="brand" target="_blank">
+      <div class="brand-logo">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">DIU CPC</span>
+        <span class="brand-tagline">99 Days Mentor</span>
+      </div>
+    </a>
+
+    <div class="dash-nav-center">
+      <div class="day-progress-pill" id="navProgress">
+        <span class="mono" id="navDay">Day 1</span>
+        <div class="pill-bar"><div class="pill-fill" id="pillFill" style="width:1%"></div></div>
+        <span class="mono" id="navPct">1%</span>
+      </div>
+    </div>
+
+    <div class="dash-nav-right">
+      <button class="icon-btn" id="roadmapBtn" title="View Roadmap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <button class="icon-btn" id="themeToggleDash" title="Toggle theme">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </button>
+      <div class="member-chip" id="memberChip">
+        <div class="member-avatar" id="memberAvatar">M</div>
+        <span class="member-chip-name" id="memberChipName">Member</span>
+      </div>
+      <button class="logout-btn" id="logoutBtn" title="Logout">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ── APP LAYOUT ── -->
+<div class="dash-layout">
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="dash-sidebar" id="sidebar">
+
+    <!-- Member Card -->
+    <div class="member-card">
+      <div class="member-avatar-lg" id="sideAvatar">M</div>
+      <div class="member-info">
+        <p class="member-name" id="sideName">Member</p>
+        <p class="member-id mono" id="sideId">ID: —</p>
+      </div>
+      <div class="member-status" id="sideStatus">
+        <span class="status-dot"></span>
+        <span id="statusLabel">Active</span>
+      </div>
+    </div>
+
+    <!-- Progress Arc -->
+    <div class="progress-card">
+      <div class="progress-header">
+        <span class="section-label mono">Journey Progress</span>
+        <span class="progress-fraction" id="progressFraction">Day 1 / 99</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-bar-fill" id="progressBar" style="width:1%"></div>
+      </div>
+      <div class="day-controls">
+        <button class="day-btn" id="prevDay">←</button>
+        <span class="current-day" id="currentDayLabel">Day 1</span>
+        <button class="day-btn" id="nextDay">→</button>
+      </div>
+    </div>
+
+    <!-- Track Selector -->
+    <div class="sidebar-section">
+      <p class="section-label mono">Your Track</p>
+      <div class="track-selector" id="trackSelector">
+        <button class="track-opt active" data-track="cp">⚔️ Competitive Prog.</button>
+        <button class="track-opt" data-track="web">🌐 Web Development</button>
+        <button class="track-opt" data-track="ml">🤖 AI &amp; ML</button>
+        <button class="track-opt" data-track="app">📱 App Development</button>
+        <button class="track-opt" data-track="explore">🔭 Explore All</button>
+      </div>
+    </div>
+
+    <!-- Quick Commands -->
+    <div class="sidebar-section">
+      <p class="section-label mono">Quick Commands</p>
+      <div class="quick-cmds">
+        <button class="qcmd" data-cmd="start">🚀 Start Journey</button>
+        <button class="qcmd" data-cmd="today">📅 Today's Lesson</button>
+        <button class="qcmd" data-cmd="challenge">⚡ Daily Challenge</button>
+        <button class="qcmd" data-cmd="roadmap">🗺️ View Roadmap</button>
+        <button class="qcmd" data-cmd="progress">📊 My Progress</button>
+        <button class="qcmd" data-cmd="help">❓ Help</button>
+      </div>
+    </div>
+
+    <!-- Stage Indicator -->
+    <div class="sidebar-section">
+      <p class="section-label mono">Current Stage</p>
+      <div class="stage-card" id="stageCard">
+        <span class="stage-icon">🏗️</span>
+        <div>
+          <p class="stage-title" id="stageTitle">Foundations</p>
+          <p class="stage-days" id="stageDays">Days 1–20</p>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- ── CHAT AREA ── -->
+  <main class="dash-main">
+
+    <!-- Chat header -->
+    <div class="chat-header">
+      <div class="chat-header-left">
+        <div class="mentor-avatar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M12 6v6l4 2"/><circle cx="18" cy="5" r="3"/></svg>
+        </div>
+        <div>
+          <p class="mentor-name">DIU CPC Mentor</p>
+          <p class="mentor-status"><span class="online-dot"></span>Always ready</p>
+        </div>
+      </div>
+      <div class="chat-header-actions">
+        <button class="icon-btn" id="clearChatBtn" title="Clear chat">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/></svg>
+        </button>
+        <button class="icon-btn sidebar-toggle-btn" id="sidebarToggle" title="Toggle sidebar">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Messages -->
+    <div class="chat-messages" id="chatMessages">
+      <!-- Messages injected by JS -->
+    </div>
+
+    <!-- Quick chips -->
+    <div class="chat-chips" id="chatChips">
+      <button class="chip" data-cmd="start">🚀 Start my 99 days</button>
+      <button class="chip" data-cmd="today">📅 Give me Day 1</button>
+      <button class="chip" data-cmd="challenge">⚡ Today's challenge</button>
+      <button class="chip" data-cmd="roadmap">🗺️ Show roadmap</button>
+      <button class="chip" data-cmd="debug">🐛 Debug help</button>
+      <button class="chip" data-cmd="review">💻 Review my code</button>
+    </div>
+
+    <!-- Input -->
+    <div class="chat-input-area">
+      <div class="chat-input-wrapper">
+        <textarea
+          id="chatInput"
+          class="chat-input"
+          placeholder="Ask anything… type 'day 1', 'challenge', 'debug', or paste your code"
+          rows="1"
+          maxlength="4000"
+        ></textarea>
+        <button class="send-btn" id="sendBtn" title="Send (Enter)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9l20-7z"/></svg>
+        </button>
+      </div>
+      <p class="input-hint mono">Enter to send · Shift+Enter for new line · <span id="charCount">0</span>/4000</p>
+    </div>
+  </main>
+</div>
+
+<!-- ── ROADMAP MODAL ── -->
+<div class="modal-overlay" id="roadmapModal" hidden>
+  <div class="roadmap-modal">
+    <div class="modal-header">
+      <h2 class="modal-title">🗺️ 99 Days Roadmap</h2>
+      <button class="modal-close" id="roadmapClose">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="roadmap-body" id="roadmapBody"><!-- injected --></div>
+  </div>
+</div>
+
+<!-- ── CODE REVIEW INPUT MODAL ── -->
+<div class="modal-overlay" id="codeModal" hidden>
+  <div class="code-modal">
+    <div class="modal-header">
+      <h2 class="modal-title">💻 Paste Your Code</h2>
+      <button class="modal-close" id="codeModalClose">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <textarea id="codeInput" class="code-textarea" placeholder="Paste your code here…" rows="12"></textarea>
+    <div class="modal-footer">
+      <button class="modal-btn-primary" id="codeSubmit">Review My Code →</button>
+      <button class="modal-btn-secondary" id="codeCancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
